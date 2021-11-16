@@ -2,16 +2,24 @@
 
 namespace Hexlet\Validator;
 
-class StringValidator implements ValidatorInterface
+class StringValidator extends ValidatorAbstract
 {
-    
-    function __construct()
+
+    public function require()
     {
-        
+        $this->addValidator(new RequiredValidator());
+        return $this;
     }
 
-    public function isValid($validate): bool
+    public function contains($needle)
     {
-        return is_string($validate);
+        $this->addValidator(new ContainsValidator($needle));
+        return $this;
+    }
+    
+    public function minLength($needle)
+    {
+        $this->addValidator(new MinLengthValidator($needle));
+        return $this;
     }
 }
