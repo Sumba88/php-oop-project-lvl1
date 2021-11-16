@@ -1,0 +1,19 @@
+{
+    "name": "hexlet/code",
+    "type": "library",
+    "authors": [
+      {
+        "name": "Someone",
+        "email": "test@test.test"
+      }
+    ],
+    "description": "hexlet php-package",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "Hexlet\\Validator\\": "src"
+      }
+    },
+    "require": {},
+    "require-dev": {}
+  }
