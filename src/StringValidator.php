@@ -5,7 +5,7 @@ namespace Hexlet\Validator;
 class StringValidator extends ValidatorAbstract
 {
 
-    public function require()
+    public function required()
     {
         $this->addValidator(new RequiredValidator());
         return $this;

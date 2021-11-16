@@ -14,10 +14,10 @@ abstract class ValidatorAbstract
         $this->validators[get_class($validator)] = $validator;
     }
 
-    public function isValid(): bool
+    public function isValid($validate): bool
     {
         foreach ($this->validators as $validator) {
-            if(!$validator->isValid()){
+            if(!$validator->isValid($validate)){
                 return false;
             }
         }
